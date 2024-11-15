@@ -22,6 +22,7 @@ public class StudyEnemy : MonoBehaviour
     private float distance;
     private float distanceOriginal;
     public float stopingDistance;
+    public bool isAttacking;
     protected void Start()
     {
         backHome = this.transform.position;
@@ -51,22 +52,39 @@ public class StudyEnemy : MonoBehaviour
     {
         distance = Vector3.Distance(target.position, this.transform.position);
 
+        if (distance <= stopingDistance)
+        {
+            agent.isStopped = true; 
+            if (!isAttacking)
+            {
+                isAttacking = true;
+                anim.SetTrigger("Attack"); 
+            }
+            return;
+        }
+
+       
         if (distance < darius && distanceOriginal < maxDistace)
         {
+            agent.isStopped = false;
             agent.SetDestination(target.position);
-            agent.stoppingDistance = stopingDistance;
         }
-        
-        if (distance > darius || distanceOriginal > maxDistace)
+        else if (distance > darius || distanceOriginal > maxDistace)
         {
+            agent.isStopped = false;
             agent.SetDestination(backHome);
         }
     }
-    
+
     protected void CheckAnimation()
     {
         float speed = agent.velocity.magnitude / agent.speed;
         anim.SetFloat("Speed", speed, smoothTime, Time.deltaTime);
+    }
+    protected void CheckAttackAnimation()
+    {
+        isAttacking = false;
+        agent.isStopped = false; 
     }
     private void RotateToOriginal()
     {

@@ -42,7 +42,7 @@ public class MeleeCombat : MonoBehaviour
     }
     private void MeLeeAttack()
     {
-        if(stats.health <= 0) target = null;
+        //if(stats.health <= 0) target = null;
         if (!target) return;
         stats.TakeDamge(target, stats.damgage);
         nextAttackTime = Time.time + attackInterval;
