@@ -1,0 +1,114 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.AI;
+
+public class MinionAI : MonoBehaviour
+{
+    private NavMeshAgent agent;
+    private Transform currentTarget;
+    public string enemyTag = "";
+    public string towerTag = "";
+
+    public float stopDistance = 2;
+    public float aggroRange = 5f;
+    public float targetSwitchInterval = 2;
+
+    private float timeSinceLastTargetSwtich = 0;
+
+    private void Start()
+    {
+        agent = GetComponent<NavMeshAgent>();
+        FindAndSetTarget();
+    }
+    private void Update()
+    {
+        timeSinceLastTargetSwtich += Time.deltaTime;
+
+        if(timeSinceLastTargetSwtich >= targetSwitchInterval)
+        {
+            CheckAndSwitchTargets();
+            timeSinceLastTargetSwtich = 0;
+        }
+
+        if(currentTarget != null)
+        {
+            Vector3 diractionToTarget = currentTarget.position - transform.position;
+
+            Vector3 stoppingPosition = currentTarget.position - diractionToTarget.normalized * stopDistance;
+
+            agent.SetDestination(stoppingPosition);
+        }
+    }
+    private void CheckAndSwitchTargets()
+    {
+        GameObject[] enemyMinions = GameObject.FindGameObjectsWithTag(enemyTag);
+        Transform closestEnemyMinion = GetClosestObjectRadius(enemyMinions, aggroRange);
+
+        if(closestEnemyMinion != null)
+        {
+            currentTarget = closestEnemyMinion;
+        }
+        else
+        {
+            GameObject[] tower = GameObject.FindGameObjectsWithTag(towerTag);
+            currentTarget = GetClosesObject(tower);
+        }
+    }
+
+    private Transform GetClosestObjectRadius(GameObject[] objects, float radius)
+    {
+        float closestDistance = Mathf.Infinity;
+        Transform closestObject = null;
+        Vector3 currentPosition = this.transform.position;
+
+        foreach(GameObject obj in objects)
+        {
+            float distance = Vector3.Distance(currentPosition, obj.transform.position);
+
+            if(distance < closestDistance && distance <= radius)
+            {
+                closestDistance = distance;
+                closestObject = obj.transform;
+            }
+        }
+        return closestObject;
+    }
+    private Transform GetClosesObject(GameObject[] objects)
+    {
+        float closestDistance = Mathf.Infinity;
+        Transform closestObject = null;
+        Vector3 currentPosition = this.transform.position;
+
+        foreach(GameObject obj in objects)
+        {
+            float distance = Vector3.Distance(currentPosition, obj.transform.position);
+
+            if(distance < closestDistance)
+            {
+                closestDistance = distance;
+                closestObject = obj.transform;
+            }
+        }
+
+
+        return closestObject;
+    }
+
+    private void FindAndSetTarget()
+    {
+        GameObject[] enemyMinions = GameObject.FindGameObjectsWithTag(enemyTag);
+        Transform closestEnemyMinion = GetClosestObjectRadius(enemyMinions,aggroRange);
+
+        if(closestEnemyMinion != null)
+        {
+            currentTarget = closestEnemyMinion;
+        }
+        else
+        {
+            GameObject[] tower = GameObject.FindGameObjectsWithTag(towerTag);
+
+            currentTarget = GetClosesObject(tower);
+        }
+    }
+}
