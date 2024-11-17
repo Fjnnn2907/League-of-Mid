@@ -8,6 +8,10 @@ TagManager:
   - Floor
   - Ground
   - Tower
+  - MinionEmeny
+  - MinionAlly
+  - TowerEnemy
+  - TowerAlly
   layers:
   - Default
   - TransparentFX

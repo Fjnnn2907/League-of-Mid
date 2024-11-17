@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class MinionAI : MonoBehaviour
 {
-    private NavMeshAgent agent;
+    public NavMeshAgent agent;
     private Transform currentTarget;
     public string enemyTag = "";
     public string towerTag = "";

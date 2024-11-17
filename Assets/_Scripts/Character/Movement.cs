@@ -7,6 +7,7 @@ public class Movement : MonoBehaviour
 
     [Header("Target")]
     [SerializeField] private LayerMask layerMask;
+    [SerializeField] private HightLightManager lightManager;
     public GameObject targetEnemy;
     public float stopingDistance;
 
@@ -33,10 +34,17 @@ public class Movement : MonoBehaviour
                 if (hit.collider.CompareTag("Ground"))
                 {
                     MoveToPosition(hit.point);
+  
                 }
                 else if (hit.collider.CompareTag("Enemy"))
                 {
                     MoveToEnemy(hit.collider.gameObject);
+
+                }
+                else if (hit.collider.CompareTag("MinionEmeny"))
+                {
+                    MoveToEnemy(hit.collider.gameObject);
+ 
                 }
             }
         }

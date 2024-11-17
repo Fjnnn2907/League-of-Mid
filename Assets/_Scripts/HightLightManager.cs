@@ -41,23 +41,23 @@ public class HightLightManager : MonoBehaviour
         }
     }
 
-    //public void SelectedHightLight()
-    //{
-    //    if (hightLightObj.CompareTag("Enemy"))
-    //    {
-    //        if(selectObj != null)
-    //            selectObj.GetComponent<Outline>().enabled = false;
+    public void SelectedHightLight()
+    {
+        if (hightLightObj.CompareTag("Enemy"))
+        {
+            if (selectObj != null)
+                selectObj.GetComponent<Outline>().enabled = false;
 
-    //        selectObj = hit.transform;
-    //        selectObj.GetComponent <Outline>().enabled = true;
+            selectObj = hit.transform;
+            selectObj.GetComponent<Outline>().enabled = true;
 
-    //        hightLightOutLine.enabled = true;
-    //        hightLightObj = null;
-    //    }
-    //}
-    //public void DeSelectHightLight()
-    //{
-    //    selectObj.GetComponent<Outline>().enabled = false;
-    //    selectObj = null;
-    //}
+            hightLightOutLine.enabled = true;
+            hightLightObj = null;
+        }
+    }
+    public void DeSelectHightLight()
+    {
+        selectObj.GetComponent<Outline>().enabled = false;
+        selectObj = null;
+    }
 }
