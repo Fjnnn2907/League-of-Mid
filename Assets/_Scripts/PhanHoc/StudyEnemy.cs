@@ -52,6 +52,8 @@ public class StudyEnemy : MonoBehaviour
 
     protected void DistanceMoveToPlayer()
     {
+        if (isDeah) return; // Nếu đã chết, không làm gì nữa.
+
         distance = Vector3.Distance(target.position, this.transform.position);
 
         if (distance <= stopingDistance)
@@ -80,6 +82,8 @@ public class StudyEnemy : MonoBehaviour
 
     protected void CheckAnimation()
     {
+        if (isDeah) return; // Không chỉnh sửa hoạt ảnh nếu đã chết.
+
         float speed = agent.velocity.magnitude / agent.speed;
         anim.SetFloat("Speed", speed, smoothTime, Time.deltaTime);
     }
@@ -96,15 +100,19 @@ public class StudyEnemy : MonoBehaviour
     }
     public void CheckIsDeah()
     {
-        if(stats.health <= 0 && !isDeah)
+        if (stats.health <= 0 && !isDeah)
         {
             anim.SetTrigger("Deah");
             isDeah = true;
 
-            // more UI Count farm
+            // Ngừng mọi hành vi di chuyển và tấn công
+            agent.isStopped = true;
+            agent.velocity = Vector3.zero;
+            isAttacking = false;
+
+            // Thêm logic nếu cần, ví dụ tăng điểm số
             FarmManager.instance.AddCount(2);
         }
-      
     }
     private void RotateToOriginal()
     {

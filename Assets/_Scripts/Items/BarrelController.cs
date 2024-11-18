@@ -8,6 +8,7 @@ public class BarrelController : MonoBehaviour
     public float explosionRadius = 2f; // Bán kính nổ
     public Stats stats;
     public ParticleSystem effect;
+    public Outline outline;
 
     private List<GameObject> damagedObjects = new List<GameObject>(); // Lưu các đối tượng đã nhận sát thương
 
@@ -48,5 +49,11 @@ public class BarrelController : MonoBehaviour
                 damagedObjects.Add(hit.gameObject);
             }
         }
+    }
+    private void OnDrawGizmos()
+    {
+        // Hiển thị bán kính nổ trong Unity Editor
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, explosionRadius);
     }
 }
