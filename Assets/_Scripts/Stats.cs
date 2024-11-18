@@ -8,7 +8,7 @@ public class Stats : MonoBehaviour
     public float health;
     public float damgage;
     public int attackSpeed;
-
+    
     public void TakeDamge(GameObject target, float damgage)
     {
         target.GetComponent<Stats>().health -= damgage;

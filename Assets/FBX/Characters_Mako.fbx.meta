@@ -359,6 +359,13 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
+      - time: 0.5344691
+        functionName: CheckDamage
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 3a06249499842b94d9ea110b76353594, type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}

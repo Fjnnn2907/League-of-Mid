@@ -121,6 +121,9 @@ public class MinionAI : MonoBehaviour
         if(stats.health <= 0 && !isDeah)
         {
             isDeah = true;  
+            agent.isStopped = true;
+            agent.velocity = Vector3.zero;
         }
+        
     }
 }

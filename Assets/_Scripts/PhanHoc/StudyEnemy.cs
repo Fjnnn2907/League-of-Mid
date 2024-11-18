@@ -89,6 +89,11 @@ public class StudyEnemy : MonoBehaviour
         isAttacking = false;
         agent.isStopped = false;
     }
+    protected void CheckDamage()
+    {
+        if (!target.gameObject) return;
+        stats.TakeDamge(target.gameObject, stats.damgage);
+    }
     public void CheckIsDeah()
     {
         if(stats.health <= 0 && !isDeah)
@@ -105,4 +110,5 @@ public class StudyEnemy : MonoBehaviour
     {
         transform.rotation = Quaternion.Slerp(transform.rotation, originalRotation, Time.deltaTime * 20f);
     }
+
 }
