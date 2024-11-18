@@ -123,6 +123,7 @@ public class MinionAI : MonoBehaviour
             isDeah = true;  
             agent.isStopped = true;
             agent.velocity = Vector3.zero;
+            FarmManager.instance.AddCount(1);
         }
         
     }

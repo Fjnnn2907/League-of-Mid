@@ -98,5 +98,15 @@ public class Movement : MonoBehaviour
             agent.isStopped = true;
             agent.ResetPath();
         }
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            CheckAnimSkill();
+            agent.isStopped = true;
+            agent.ResetPath();
+        }
+    }
+    protected virtual void CheckAnimSkill()
+    {
+
     }
 }

@@ -20,6 +20,7 @@ public class Skill
 public class SkillUI : MonoBehaviour
 {
     public List<Skill> skillList;
+    public HeroesSkill heroesSkill;
 
     private void Start()
     {
@@ -40,10 +41,12 @@ public class SkillUI : MonoBehaviour
         }
     }
 
-    private void HandleSkillInput(Skill skill)
+    public void HandleSkillInput(Skill skill)
     {
         if (Input.GetKeyDown(skill.skillKey) && !skill.isSkillOnCooldown)
         {
+            if(skill.skillKey == KeyCode.W)
+                heroesSkill.SkillTwo(skill.skillKey);
             skill.isSkillOnCooldown = true;
             skill.currentCoolDown = skill.skillCoolDown;
         }

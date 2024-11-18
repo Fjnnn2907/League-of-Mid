@@ -7,9 +7,9 @@ public class HeroesSkill : MonoBehaviour
     public GameObject barrelPrefab; // Prefab của thùng
     public float range = 5f; // Tầm đặt thùng
 
-    void Update()
+    public void SkillTwo(KeyCode keyCode)
     {
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown(keyCode))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out RaycastHit hit))

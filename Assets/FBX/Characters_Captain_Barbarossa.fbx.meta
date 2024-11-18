@@ -403,7 +403,7 @@ ModelImporter:
       name: CharacterArmature|Wave
       takeName: CharacterArmature|Wave
       internalID: -9021793991225143758
-      firstFrame: 0
+      firstFrame: 20
       lastFrame: 46
       wrapMode: 0
       orientationOffsetY: 0

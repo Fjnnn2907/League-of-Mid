@@ -8,14 +8,13 @@ public class BarrelController : MonoBehaviour
     public float explosionRadius = 2f; // Bán kính nổ
     public Stats stats;
     public ParticleSystem effect;
-    public Outline outline;
-
     private List<GameObject> damagedObjects = new List<GameObject>(); // Lưu các đối tượng đã nhận sát thương
 
     private void Start()
     {
         Destroy(gameObject, lifetime); // Xóa thùng sau thời gian tồn tại
         effect.Pause();
+
     }
 
     private void Update()
