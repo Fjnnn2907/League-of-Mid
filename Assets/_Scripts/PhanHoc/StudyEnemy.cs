@@ -22,8 +22,11 @@ public class StudyEnemy : MonoBehaviour
     public float stopingDistance;
     public bool isAttacking;
 
+    protected bool isDeah = false;
+    [SerializeField] protected Stats stats;
     [SerializeField] private float attackCooldown = 2f; 
     private float lastAttackTime = 0f;
+
 
     protected void Start()
     {
@@ -33,10 +36,11 @@ public class StudyEnemy : MonoBehaviour
 
     protected void Update()
     {
+        this.CheckIsDeah();
+        if(this.isDeah) return;
         this.DistanceMoveToPlayer();
         this.DistanceOriginal();
         this.CheckAnimation();
-
         if (Vector3.Distance(transform.position, backHome) < 0.1f)
             RotateToOriginal();
     }
@@ -85,7 +89,18 @@ public class StudyEnemy : MonoBehaviour
         isAttacking = false;
         agent.isStopped = false;
     }
+    public void CheckIsDeah()
+    {
+        if(stats.health <= 0 && !isDeah)
+        {
+            anim.SetTrigger("Deah");
+            isDeah = true;
 
+            // more UI Count farm
+            FarmManager.instance.AddCount(2);
+        }
+      
+    }
     private void RotateToOriginal()
     {
         transform.rotation = Quaternion.Slerp(transform.rotation, originalRotation, Time.deltaTime * 20f);

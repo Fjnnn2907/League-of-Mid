@@ -15,8 +15,8 @@ public class Stats : MonoBehaviour
 
         if (target.GetComponent<Stats>().health <= 0)
         {
-            target.SetActive(false);
-            //Destroy(target);
+            //target.SetActive(false);
+            Destroy(target,1);
         }
     }
 }

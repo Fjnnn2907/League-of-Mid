@@ -16,6 +16,8 @@ public class MinionAI : MonoBehaviour
 
     private float timeSinceLastTargetSwtich = 0;
 
+    public bool isDeah = false;
+    [SerializeField] protected Stats stats;
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -23,6 +25,8 @@ public class MinionAI : MonoBehaviour
     }
     private void Update()
     {
+        this.CheckDeah();
+        if(isDeah) return;
         timeSinceLastTargetSwtich += Time.deltaTime;
 
         if(timeSinceLastTargetSwtich >= targetSwitchInterval)
@@ -58,6 +62,7 @@ public class MinionAI : MonoBehaviour
 
     private Transform GetClosestObjectRadius(GameObject[] objects, float radius)
     {
+     
         float closestDistance = Mathf.Infinity;
         Transform closestObject = null;
         Vector3 currentPosition = this.transform.position;
@@ -109,6 +114,13 @@ public class MinionAI : MonoBehaviour
             GameObject[] tower = GameObject.FindGameObjectsWithTag(towerTag);
 
             currentTarget = GetClosesObject(tower);
+        }
+    }
+    public void CheckDeah()
+    {
+        if(stats.health <= 0 && !isDeah)
+        {
+            isDeah = true;  
         }
     }
 }

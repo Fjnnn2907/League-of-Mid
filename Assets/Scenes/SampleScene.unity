@@ -3594,10 +3594,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 5
+  m_text: '0
+
+'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 66f13d54fdce42f47a16ddbf06913cf3, type: 2}
+  m_sharedMaterial: {fileID: -1727239271702690070, guid: 66f13d54fdce42f47a16ddbf06913cf3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4225,6 +4227,8 @@ MonoBehaviour:
   stopDistance: 2
   aggroRange: 5
   targetSwitchInterval: 2
+  isDeah: 0
+  stats: {fileID: 339245315}
 --- !u!114 &339245315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6105,6 +6109,7 @@ GameObject:
   - component: {fileID: 406714290}
   - component: {fileID: 406714289}
   - component: {fileID: 406714293}
+  - component: {fileID: 406714294}
   m_Layer: 5
   m_Name: Canvas Skill
   m_TagString: Untagged
@@ -6210,6 +6215,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeText: {fileID: 1694362126}
+--- !u!114 &406714294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 406714288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 649acfa2f26836640b56a2398d8bd670, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  farmText: {fileID: 1683590360}
+  CountFarm: 0
 --- !u!1001 &408041886
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7177,10 +7196,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 5
+  m_text: '0
+
+'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 66f13d54fdce42f47a16ddbf06913cf3, type: 2}
+  m_sharedMaterial: {fileID: -1727239271702690070, guid: 66f13d54fdce42f47a16ddbf06913cf3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -19499,10 +19520,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 100
+  m_text: '0
+
+'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 66f13d54fdce42f47a16ddbf06913cf3, type: 2}
+  m_sharedMaterial: {fileID: -1727239271702690070, guid: 66f13d54fdce42f47a16ddbf06913cf3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -19635,8 +19658,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 00:00
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 66f13d54fdce42f47a16ddbf06913cf3, type: 2}
+  m_sharedMaterial: {fileID: -1727239271702690070, guid: 66f13d54fdce42f47a16ddbf06913cf3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -19696,7 +19719,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 60.710503, y: 0, z: 22.280663, w: 0}
+  m_margin: {x: 60.710503, y: 0, z: 8.74012, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -25183,7 +25206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cad151945fc8c754aa2d57983fa33b7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 20
   damgage: 5
   attackSpeed: 3
 --- !u!114 &919132147975336459
@@ -25723,6 +25746,7 @@ MonoBehaviour:
   originalRotation: {x: 0, y: 0, z: 0, w: 0}
   stopingDistance: 1.2
   isAttacking: 0
+  stats: {fileID: 919132147975336458}
   attackCooldown: 2
 --- !u!95 &919132147975336462
 Animator:
@@ -25843,7 +25867,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cad151945fc8c754aa2d57983fa33b7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 20
   damgage: 5
   attackSpeed: 3
 --- !u!114 &919132149522099908
@@ -26383,6 +26407,7 @@ MonoBehaviour:
   originalRotation: {x: 0, y: 0, z: 0, w: 0}
   stopingDistance: 1.2
   isAttacking: 0
+  stats: {fileID: 919132149522099907}
   attackCooldown: 2
 --- !u!95 &919132149522099911
 Animator:
@@ -27400,6 +27425,7 @@ MonoBehaviour:
   originalRotation: {x: 0, y: 0, z: 0, w: 0}
   stopingDistance: 1.2
   isAttacking: 0
+  stats: {fileID: 0}
   attackCooldown: 2
 --- !u!195 &1833254274814620141
 NavMeshAgent:
