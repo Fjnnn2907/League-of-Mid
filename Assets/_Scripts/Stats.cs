@@ -9,14 +9,14 @@ public class Stats : MonoBehaviour
     public float damgage;
     public int attackSpeed;
     
-    public void TakeDamge(GameObject target, float damgage,float timeDeah)
+    public void TakeDamge(GameObject target, float damgage)
     {
         target.GetComponent<Stats>().health -= damgage;
 
         if (target.GetComponent<Stats>().health <= 0)
         {
             //target.SetActive(false);
-            Destroy(target, timeDeah);
+            Destroy(target, 1);
         }
     }
 }

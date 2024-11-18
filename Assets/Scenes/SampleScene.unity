@@ -33073,12 +33073,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5359646288012503420}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c8e03ff06dea51b4483fa76c322463d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outline: {fileID: 919132149522099909}
+  outline: {fileID: 8540305794494020711}
 --- !u!114 &8540305794494020711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33086,7 +33086,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5359646288012503420}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
   m_Name: 
@@ -33596,7 +33596,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifetime: 20
   explosionRadius: 2.5
-  explosionEffect: {fileID: 0}
+  stats: {fileID: 8540305794494020709}
+  effect: {fileID: 0}
 --- !u!1 &8610333576815906715
 GameObject:
   m_ObjectHideFlags: 0

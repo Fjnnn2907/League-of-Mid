@@ -18,7 +18,8 @@ public class HeroesSkill : MonoBehaviour
 
                 if (Vector3.Distance(transform.position, mousePosition) <= range)
                 {
-                    Instantiate(barrelPrefab, mousePosition, Quaternion.Euler(-90f, 0f, 0f));
+                    var Box = Instantiate(barrelPrefab, mousePosition, Quaternion.Euler(-90f, 0f, 0f));
+                    Box.SetActive(true);
                 }
             }
         }
