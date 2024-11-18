@@ -92,7 +92,7 @@ public class StudyEnemy : MonoBehaviour
     protected void CheckDamage()
     {
         if (!target.gameObject) return;
-        stats.TakeDamge(target.gameObject, stats.damgage);
+        stats.TakeDamge(target.gameObject, stats.damgage,1);
     }
     public void CheckIsDeah()
     {

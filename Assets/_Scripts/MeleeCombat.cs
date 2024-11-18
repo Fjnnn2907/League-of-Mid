@@ -44,9 +44,9 @@ public class MeleeCombat : MonoBehaviour
     {
         //if(stats.health <= 0) target = null;
         if (!target) return;
-        stats.TakeDamge(target, stats.damgage);
+        anim.SetBool("isAttack", false);
         nextAttackTime = Time.time + attackInterval;
         perFormMeleeAttack = true;
-        anim.SetBool("isAttack", false);
+        stats.TakeDamge(target, stats.damgage,1);
     }
 }
