@@ -125,6 +125,7 @@ public class MinionAI : MonoBehaviour
             agent.velocity = Vector3.zero;
             FarmManager.instance.AddCount(1);
             CointManager.instance.AddCoint(20);
+            ExpManager.instance.AddExp(10);
         }
         
     }
