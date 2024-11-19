@@ -17,8 +17,12 @@ public class Animation : Movement
         float speed = agent.velocity.magnitude/agent.speed;
         anim.SetFloat("Speed", speed, smoothTime, Time.deltaTime);
     }
-    protected override void CheckAnimSkill()
+    protected override void CheckAnimSkill2()
     {
         anim.SetTrigger("isSkill");
+    }
+    protected override void CheckAnimSkill1()
+    {
+        anim.SetTrigger("isSkill1");
     }
 }

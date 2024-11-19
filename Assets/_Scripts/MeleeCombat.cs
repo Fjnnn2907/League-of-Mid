@@ -42,8 +42,6 @@ public class MeleeCombat : MonoBehaviour
     }
     private void MeLeeAttack()
     {
-        if(stats.health <= 0) target = null;
-        if (!target) return;
         anim.SetBool("isAttack", false);
         nextAttackTime = Time.time + attackInterval;
         perFormMeleeAttack = true;

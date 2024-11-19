@@ -100,13 +100,18 @@ public class Movement : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.W))
         {
-            CheckAnimSkill();
+            CheckAnimSkill2();
+            agent.isStopped = true;
+            agent.ResetPath();
+        }
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            CheckAnimSkill1();
             agent.isStopped = true;
             agent.ResetPath();
         }
     }
-    protected virtual void CheckAnimSkill()
-    {
+    protected virtual void CheckAnimSkill2() { }
 
-    }
+    protected virtual void CheckAnimSkill1() { }
 }

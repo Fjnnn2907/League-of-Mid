@@ -273,8 +273,8 @@ ModelImporter:
       name: CharacterArmature|Punch
       takeName: CharacterArmature|Punch
       internalID: -4592842328519117816
-      firstFrame: 0
-      lastFrame: 23
+      firstFrame: 5.1
+      lastFrame: 15.800001
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -294,10 +294,10 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.43308383
-        functionName: MeLeeAttack
+      - time: 0.45028812
+        functionName: BoomItem
         data: 
-        objectReferenceParameter: {fileID: 11500000, guid: 65d422e6bb254e646be9901c602be864, type: 3}
+        objectReferenceParameter: {fileID: 11500000, guid: 2470feb345a218942a11056535da02a7, type: 3}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
@@ -359,10 +359,10 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.5131993
+      - time: 0.47879082
         functionName: MeLeeAttack
         data: 
-        objectReferenceParameter: {instanceID: 0}
+        objectReferenceParameter: {fileID: 11500000, guid: 65d422e6bb254e646be9901c602be864, type: 3}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
@@ -404,7 +404,7 @@ ModelImporter:
       takeName: CharacterArmature|Wave
       internalID: -9021793991225143758
       firstFrame: 20
-      lastFrame: 46
+      lastFrame: 30
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
