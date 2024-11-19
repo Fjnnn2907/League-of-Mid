@@ -112,6 +112,7 @@ public class StudyEnemy : MonoBehaviour
 
             // Thêm logic nếu cần, ví dụ tăng điểm số
             FarmManager.instance.AddCount(2);
+            CointManager.instance.AddCoint(50);
         }
     }
     private void RotateToOriginal()
