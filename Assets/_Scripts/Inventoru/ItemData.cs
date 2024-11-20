@@ -18,5 +18,5 @@ public class StasItem
     public int Heeal;
     public int Damage;
     public int deff;
-    public int speed;
+    public int speed; 
 }
