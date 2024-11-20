@@ -17,6 +17,6 @@ public class InventoryManager : MonoBehaviour
             }
         }
 
-        Debug.Log("Inventory full!"); // Hiển thị thông báo khi hết chỗ
+        Debug.Log("Inventory full!");
     }
 }

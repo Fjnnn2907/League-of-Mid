@@ -2410,13 +2410,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 128796801}
+        m_TargetAssemblyTypeName: Item, Assembly-CSharp
+        m_MethodName: OnButtonBuyToItem
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2434,9 +2434,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f294197cec032a74eadae1de0cd92e3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: 
-  itemSprite: {fileID: 0}
-  inventoryManager: {fileID: 0}
+  itemName: Gay Phep
+  itemSprite: {fileID: 21300000, guid: a4b5f62f33b3e004e8aace652e009615, type: 3}
+  inventoryManager: {fileID: 1718531457}
 --- !u!114 &128796802
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4691,13 +4691,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 296723870}
+        m_TargetAssemblyTypeName: Item, Assembly-CSharp
+        m_MethodName: OnButtonBuyToItem
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -4716,8 +4716,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: 
-  itemSprite: {fileID: 0}
-  inventoryManager: {fileID: 0}
+  itemSprite: {fileID: 21300000, guid: c544836e2ceee34428d1abdac6b5ac59, type: 3}
+  inventoryManager: {fileID: 1718531457}
 --- !u!114 &296723871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7941,13 +7941,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 414491420}
+        m_TargetAssemblyTypeName: Item, Assembly-CSharp
+        m_MethodName: OnButtonBuyToItem
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -7966,8 +7966,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: 
-  itemSprite: {fileID: 0}
-  inventoryManager: {fileID: 0}
+  itemSprite: {fileID: 21300000, guid: ee0ed61959fdb2a4fa6a6294228f5f47, type: 3}
+  inventoryManager: {fileID: 1718531457}
 --- !u!114 &414491421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8106,6 +8106,7 @@ GameObject:
   - component: {fileID: 436843132}
   - component: {fileID: 436843131}
   - component: {fileID: 436843133}
+  - component: {fileID: 436843134}
   m_Layer: 5
   m_Name: Slot1
   m_TagString: Untagged
@@ -8189,6 +8190,62 @@ MonoBehaviour:
   isFull: 0
   quantityText: {fileID: 597992733}
   itemImage: {fileID: 829450008}
+--- !u!114 &436843134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 436843129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 436843131}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 436843133}
+        m_TargetAssemblyTypeName: ItemSlot, Assembly-CSharp
+        m_MethodName: ClearSlot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &437208419
 GameObject:
   m_ObjectHideFlags: 0
@@ -9827,13 +9884,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 544614964}
+        m_TargetAssemblyTypeName: Item, Assembly-CSharp
+        m_MethodName: OnButtonBuyToItem
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -9852,8 +9909,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: 
-  itemSprite: {fileID: 0}
-  inventoryManager: {fileID: 0}
+  itemSprite: {fileID: 21300000, guid: 6f6648c32a819be4a87ef3bad2807bad, type: 3}
+  inventoryManager: {fileID: 1718531457}
 --- !u!114 &544614965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12063,6 +12120,7 @@ GameObject:
   - component: {fileID: 651636494}
   - component: {fileID: 651636493}
   - component: {fileID: 651636492}
+  - component: {fileID: 651636495}
   m_Layer: 5
   m_Name: Slot1 (4)
   m_TagString: Untagged
@@ -12146,6 +12204,62 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 651636490}
   m_CullTransparentMesh: 1
+--- !u!114 &651636495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 651636490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 651636493}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 651636492}
+        m_TargetAssemblyTypeName: ItemSlot, Assembly-CSharp
+        m_MethodName: ClearSlot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &659173962 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 90c1c7ed7db3fee42a631152cb26bbf6, type: 3}
@@ -13476,13 +13590,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 777119396}
+        m_TargetAssemblyTypeName: Item, Assembly-CSharp
+        m_MethodName: OnButtonBuyToItem
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -13501,8 +13615,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: 
-  itemSprite: {fileID: 0}
-  inventoryManager: {fileID: 0}
+  itemSprite: {fileID: 21300000, guid: f7a8708dc5bcaf14ebd3978a42a6ea65, type: 3}
+  inventoryManager: {fileID: 1718531457}
 --- !u!114 &777119397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14872,6 +14986,7 @@ GameObject:
   - component: {fileID: 843789018}
   - component: {fileID: 843789017}
   - component: {fileID: 843789016}
+  - component: {fileID: 843789019}
   m_Layer: 5
   m_Name: Slot1 (2)
   m_TagString: Untagged
@@ -14955,6 +15070,62 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 843789014}
   m_CullTransparentMesh: 1
+--- !u!114 &843789019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 843789014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 843789017}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 843789016}
+        m_TargetAssemblyTypeName: ItemSlot, Assembly-CSharp
+        m_MethodName: ClearSlot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &844680415
 GameObject:
   m_ObjectHideFlags: 0
@@ -15607,13 +15778,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 883952067}
+        m_TargetAssemblyTypeName: Item, Assembly-CSharp
+        m_MethodName: OnButtonBuyToItem
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -15632,8 +15803,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: 
-  itemSprite: {fileID: 0}
-  inventoryManager: {fileID: 0}
+  itemSprite: {fileID: 21300000, guid: 4a59607811bc1f9459591856511467a5, type: 3}
+  inventoryManager: {fileID: 1718531457}
 --- !u!114 &883952068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18026,13 +18197,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1026426780}
+        m_TargetAssemblyTypeName: Item, Assembly-CSharp
+        m_MethodName: OnButtonBuyToItem
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -18051,8 +18222,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: 
-  itemSprite: {fileID: 0}
-  inventoryManager: {fileID: 0}
+  itemSprite: {fileID: 21300000, guid: 67eaf2a7d1686074684270d1821c55cb, type: 3}
+  inventoryManager: {fileID: 1718531457}
 --- !u!114 &1026426781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18175,13 +18346,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1040947768}
+        m_TargetAssemblyTypeName: Item, Assembly-CSharp
+        m_MethodName: OnButtonBuyToItem
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -18200,8 +18371,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: 
-  itemSprite: {fileID: 0}
-  inventoryManager: {fileID: 0}
+  itemSprite: {fileID: 21300000, guid: 60c1d42986dc0094c808b9e135f31ba2, type: 3}
+  inventoryManager: {fileID: 1718531457}
 --- !u!114 &1040947769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18486,13 +18657,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1082526819}
+        m_TargetAssemblyTypeName: Item, Assembly-CSharp
+        m_MethodName: OnButtonBuyToItem
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -18510,9 +18681,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f294197cec032a74eadae1de0cd92e3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: 
-  itemSprite: {fileID: 0}
-  inventoryManager: {fileID: 0}
+  itemName: Lao
+  itemSprite: {fileID: 21300000, guid: bbceae73b019590439ef5129744308a1, type: 3}
+  inventoryManager: {fileID: 1718531457}
 --- !u!114 &1082526820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20127,6 +20298,7 @@ GameObject:
   - component: {fileID: 1178058101}
   - component: {fileID: 1178058100}
   - component: {fileID: 1178058099}
+  - component: {fileID: 1178058102}
   m_Layer: 5
   m_Name: Slot1 (1)
   m_TagString: Untagged
@@ -20210,6 +20382,62 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1178058097}
   m_CullTransparentMesh: 1
+--- !u!114 &1178058102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1178058097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1178058100}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1178058099}
+        m_TargetAssemblyTypeName: ItemSlot, Assembly-CSharp
+        m_MethodName: ClearSlot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1179441056
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21454,13 +21682,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1287059173}
+        m_TargetAssemblyTypeName: Item, Assembly-CSharp
+        m_MethodName: OnButtonBuyToItem
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -21479,8 +21707,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: 
-  itemSprite: {fileID: 0}
-  inventoryManager: {fileID: 0}
+  itemSprite: {fileID: 21300000, guid: dbaa50961e3cd37468021eb65d631c9f, type: 3}
+  inventoryManager: {fileID: 1718531457}
 --- !u!114 &1287059174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21603,13 +21831,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1297072197}
+        m_TargetAssemblyTypeName: Item, Assembly-CSharp
+        m_MethodName: OnButtonBuyToItem
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -21628,8 +21856,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: 
-  itemSprite: {fileID: 0}
-  inventoryManager: {fileID: 0}
+  itemSprite: {fileID: 21300000, guid: cee802c4711b2cc4c9be089c2d913ba9, type: 3}
+  inventoryManager: {fileID: 1718531457}
 --- !u!114 &1297072198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21963,13 +22191,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1304671925}
+        m_TargetAssemblyTypeName: Item, Assembly-CSharp
+        m_MethodName: OnButtonBuyToItem
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -21988,8 +22216,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: 
-  itemSprite: {fileID: 0}
-  inventoryManager: {fileID: 0}
+  itemSprite: {fileID: 21300000, guid: 8c9bfd928f78cb541b9b79cfb995e5ae, type: 3}
+  inventoryManager: {fileID: 1718531457}
 --- !u!114 &1304671926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26309,6 +26537,7 @@ GameObject:
   - component: {fileID: 1644311332}
   - component: {fileID: 1644311331}
   - component: {fileID: 1644311330}
+  - component: {fileID: 1644311333}
   m_Layer: 5
   m_Name: Slot1 (3)
   m_TagString: Untagged
@@ -26392,6 +26621,62 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1644311328}
   m_CullTransparentMesh: 1
+--- !u!114 &1644311333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1644311328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1644311331}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1644311330}
+        m_TargetAssemblyTypeName: ItemSlot, Assembly-CSharp
+        m_MethodName: ClearSlot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &1648066551 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 90c1c7ed7db3fee42a631152cb26bbf6, type: 3}
@@ -30729,6 +31014,7 @@ GameObject:
   - component: {fileID: 1926298864}
   - component: {fileID: 1926298863}
   - component: {fileID: 1926298862}
+  - component: {fileID: 1926298865}
   m_Layer: 5
   m_Name: Slot1 (5)
   m_TagString: Untagged
@@ -30812,6 +31098,62 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1926298860}
   m_CullTransparentMesh: 1
+--- !u!114 &1926298865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1926298860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1926298863}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1926298862}
+        m_TargetAssemblyTypeName: ItemSlot, Assembly-CSharp
+        m_MethodName: ClearSlot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &1930286525 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 90c1c7ed7db3fee42a631152cb26bbf6, type: 3}
@@ -31546,13 +31888,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1993349077}
+        m_TargetAssemblyTypeName: Item, Assembly-CSharp
+        m_MethodName: OnButtonBuyToItem
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -31571,8 +31913,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: 
-  itemSprite: {fileID: 0}
-  inventoryManager: {fileID: 0}
+  itemSprite: {fileID: 21300000, guid: 8661c2c7e325a33438f06b02458fd199, type: 3}
+  inventoryManager: {fileID: 1718531457}
 --- !u!114 &1993349078
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32953,13 +33295,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 2118512135}
+        m_TargetAssemblyTypeName: Item, Assembly-CSharp
+        m_MethodName: OnButtonBuyToItem
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -32978,8 +33320,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: 
-  itemSprite: {fileID: 0}
-  inventoryManager: {fileID: 0}
+  itemSprite: {fileID: 21300000, guid: 0c6de69acca756c409be4810a8510ac5, type: 3}
+  inventoryManager: {fileID: 1718531457}
 --- !u!114 &2118512136
 MonoBehaviour:
   m_ObjectHideFlags: 0
