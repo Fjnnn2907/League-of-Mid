@@ -21,7 +21,7 @@ public class ItemSlot : MonoBehaviour
         // Cập nhật hình ảnh và hiển thị số lượng
         itemImage.sprite = itemSprite;
         itemImage.enabled = true; // Hiển thị hình ảnh nếu nó bị ẩn
-        quantityText.text = "1";  // Đặt số lượng ban đầu
+        quantityText.text = "";  // Đặt số lượng ban đầu
     }
 
     public void ClearSlot()
