@@ -29,7 +29,7 @@ public class HightLightManager : MonoBehaviour
         {
             hightLightObj = hit.transform;
 
-            if(hightLightObj.CompareTag("Enemy") && hightLightObj != selectObj)
+            if(hightLightObj.CompareTag("Enemy") || hightLightObj.CompareTag("NPC") && hightLightObj != selectObj)
             {
                 hightLightOutLine = hightLightObj.GetComponent<Outline>();
                 hightLightOutLine.enabled = true;

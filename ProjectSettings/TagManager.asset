@@ -12,6 +12,7 @@ TagManager:
   - MinionAlly
   - TowerEnemy
   - TowerAlly
+  - NPC
   layers:
   - Default
   - TransparentFX

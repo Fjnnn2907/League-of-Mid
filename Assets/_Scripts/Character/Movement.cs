@@ -9,6 +9,7 @@ public class Movement : MonoBehaviour
     [SerializeField] private LayerMask layerMask;
     [SerializeField] private HightLightManager lightManager;
     public GameObject targetEnemy;
+    public GameObject NPC;
     public float stopingDistance;
 
     protected void Start()
@@ -44,7 +45,10 @@ public class Movement : MonoBehaviour
                 else if (hit.collider.CompareTag("MinionEmeny"))
                 {
                     MoveToEnemy(hit.collider.gameObject);
- 
+                }
+                else if (hit.collider.CompareTag("NPC"))
+                {
+                    MoveToNPC(hit.collider.gameObject);
                 }
             }
         }
@@ -54,6 +58,13 @@ public class Movement : MonoBehaviour
             if (Vector3.Distance(transform.position, targetEnemy.transform.position) > stopingDistance)
             {
                 agent.SetDestination(targetEnemy.transform.position);
+            }
+        }
+        if(NPC != null)
+        {
+            if (Vector3.Distance(transform.position, NPC.transform.position) > stopingDistance)
+            {
+                agent.SetDestination(NPC.transform.position);
             }
         }
     }
@@ -66,14 +77,23 @@ public class Movement : MonoBehaviour
 
         if (targetEnemy != null)
             targetEnemy = null;
+        if(NPC != null)
+            NPC = null;
     }
-
     private void MoveToEnemy(GameObject enemy)
     {
         targetEnemy = enemy;
         agent.SetDestination(targetEnemy.transform.position);
         agent.stoppingDistance = stopingDistance;
         Rotation(targetEnemy.transform.position);
+    }
+    private void MoveToNPC(GameObject enemy)
+    {
+        //targetEnemy = null;
+        NPC = enemy;
+        agent.SetDestination(NPC.transform.position);
+        agent.stoppingDistance = stopingDistance;
+        Rotation(NPC.transform.position);
     }
 
     private void RotateTowardsMovementDirection()

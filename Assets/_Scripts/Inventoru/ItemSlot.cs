@@ -11,7 +11,10 @@ public class ItemSlot : MonoBehaviour
 
     [SerializeField] TextMeshProUGUI quantityText;
     [SerializeField] Image itemImage;
-
+    private void Start()
+    {
+        ClearSlot();
+    }
     public void AddItemToItemSlot(string _itemName, Sprite _itemSprite)
     {
         itemName = _itemName;

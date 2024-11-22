@@ -14,9 +14,5 @@ public class Item : MonoBehaviour
         {
             inventoryManager.AddItemToInventory(itemName, itemSprite);
         }
-        else
-        {
-            Debug.LogError("InventoryManager is not assigned!");
-        }
     }
 }
