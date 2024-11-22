@@ -9,7 +9,7 @@ public class Dialog : MonoBehaviour
     private bool talkBefore = false;
     private int currentIndex = 0;
     public string TitleName;
-    protected Transform cameraTransform;
+
 
     public GameObject dialogBox;
     //public TextMeshProUGUI TitleText;
@@ -22,14 +22,11 @@ public class Dialog : MonoBehaviour
     [TextArea(3, 10)]
     public string[] repeatDialog;
 
-    private void Start()
-    {
-        cameraTransform = Camera.main.transform;
-    }
+
     private void Update()
     {
         if (dialogBox == null) return;
-        if (Input.GetKeyDown(KeyCode.Mouse0) && isDialoging)
+        if (Input.GetMouseButtonDown(0) && isDialoging)
         {
             if (!dialogBox.activeInHierarchy)
             {
@@ -40,11 +37,6 @@ public class Dialog : MonoBehaviour
                 DisplayNextLine();
             }
         }
-    }
-    protected void LateUpdate()
-    {
-        this.transform.LookAt(transform.position + cameraTransform.rotation
-            * -Vector3.forward, cameraTransform.rotation * Vector3.up);
     }
     private void StartDialog()
     {
