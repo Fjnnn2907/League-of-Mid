@@ -1,31 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
 
 public class Dialog : MonoBehaviour
 {
     private bool talkBefore = false;
     private int currentIndex = 0;
-    public string TitleName;
 
+    public string npcName;
+    public string playerName;
 
     public GameObject dialogBox;
-    //public TextMeshProUGUI TitleText;
-    public TextMeshProUGUI contantText;
+    public TextMeshProUGUI speakerNameText;
+    public TextMeshProUGUI contentText;
     public bool isDialoging = false;
 
-    [TextArea(3, 10)]
-    public string[] firstDialog;
 
-    [TextArea(3, 10)]
-    public string[] repeatDialog;
+    public List<DialogLine> firstDialog = new List<DialogLine>();
+    public List<DialogLine> repeatDialog = new List<DialogLine>();
 
+    private List<DialogLine> currentDialog;
 
     private void Update()
     {
         if (dialogBox == null) return;
+
         if (Input.GetMouseButtonDown(0) && isDialoging)
         {
             if (!dialogBox.activeInHierarchy)
@@ -38,48 +38,36 @@ public class Dialog : MonoBehaviour
             }
         }
     }
+
     private void StartDialog()
     {
         dialogBox.SetActive(true);
         currentIndex = 0;
-        //TitleText.text = TitleName;
-        if (!talkBefore)
-        {
-            contantText.text = firstDialog[currentIndex];
-        }
-        else
-        {
-            contantText.text = repeatDialog[currentIndex];
-        }
+
+        currentDialog = talkBefore ? repeatDialog : firstDialog;
+
+        DisplayNextLine();
     }
 
     private void DisplayNextLine()
     {
-        //TitleText.text = TitleName;
-
-        if (!talkBefore)
+        if (currentIndex < currentDialog.Count)
         {
+            var dialogLine = currentDialog[currentIndex];
+            if (dialogLine.speaker == npcName)
+                speakerNameText.text = dialogLine.speaker;
+            else if(dialogLine.speaker == playerName)
+                contentText.text = dialogLine.speaker;
+            //speakerNameText.text = dialogLine.speaker == "NPC" ? npcName : playerName;
+            contentText.text = dialogLine.content;
             currentIndex++;
-            if (currentIndex < firstDialog.Length)
-            {
-                contantText.text = firstDialog[currentIndex];
-            }
-            else
-            {
-                EndDialog();
-                talkBefore = true;
-            }
         }
         else
         {
-            currentIndex++;
-            if (currentIndex < repeatDialog.Length)
+            EndDialog();
+            if (!talkBefore)
             {
-                contantText.text = repeatDialog[currentIndex];
-            }
-            else
-            {
-                EndDialog();
+                talkBefore = true;
             }
         }
     }
@@ -89,6 +77,7 @@ public class Dialog : MonoBehaviour
         dialogBox.gameObject.SetActive(false);
         currentIndex = 0;
     }
+
     private void OnTriggerEnter(Collider collision)
     {
         if (collision.CompareTag("Player"))
@@ -96,6 +85,7 @@ public class Dialog : MonoBehaviour
             isDialoging = true;
         }
     }
+
     private void OnTriggerExit(Collider collision)
     {
         if (collision.CompareTag("Player"))
@@ -104,4 +94,10 @@ public class Dialog : MonoBehaviour
             EndDialog();
         }
     }
+}
+[System.Serializable]
+public class DialogLine
+{
+    public string speaker;
+    [TextArea(3, 10)] public string content;
 }

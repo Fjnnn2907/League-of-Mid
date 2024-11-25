@@ -126,6 +126,8 @@ public class MinionAI : MonoBehaviour
             FarmManager.instance.AddCount(1);
             CointManager.instance.AddCoint(20);
             ExpManager.instance.AddExp(10);
+            // them :D
+            KillEnemy.Instance.AddKill(1);
         }
         
     }

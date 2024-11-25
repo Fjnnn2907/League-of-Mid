@@ -114,6 +114,8 @@ public class StudyEnemy : MonoBehaviour
             FarmManager.instance.AddCount(2);
             CointManager.instance.AddCoint(50);
             ExpManager.instance.AddExp(50);
+            // thêm một xíu :))
+            KillEnemy.Instance.AddKill(1);
         }
     }
     private void RotateToOriginal()
